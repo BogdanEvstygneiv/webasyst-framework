@@ -18,5 +18,7 @@ jobs:
 
       - name: Validate composer.json and composer.lock
         uses: firehed/lint-php-action@v1
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
       - name: PHPUnit
         uses: chindit/actions-phpunit@master
